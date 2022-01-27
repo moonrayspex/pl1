@@ -11,7 +11,7 @@ Be creative and use multiple parameters from the API documentation to earn a top
 ```
 https://maps.googleapis.com/maps/api/directions/json?origin=place_id:ChIJOVIYgEI51kwReS_EYsXpb-8&destination=place_id:ChIJyzAp6p8BJk0R3g7jWth_sIo&key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE
 
-https://YourDirectionsApiURLGoesHere
+
 ```
 
 ## Next paste the full JSON response to this query here:
