@@ -22,21 +22,21 @@ function initMap() {
   
     directionsService
       .route({
-        origin: { lat: 53.86729370705401, lng: 10.6704796398457 },
-        destination: {lat: 53.87289987782688, lng: 10.746035787660583},
+        origin: { lat: 53.86729370705401, lng: 10.6704796398457 }, //hauptbahnhof
+        destination: {lat: 53.87289987782688, lng: 10.746035787660583}, //hotel
         //destination: { lat: 53.873207404769104, lng: 10.746151065673029},
         //Start at Hauptbahnhof - train station, end at Hotel Arnimsruh
         waypoints: [
-            {location: {lat: 53.8663742123479, lng: 10.679616632958648}},
-            {location: {lat: 53.86586176453497, lng: 10.682245197515524}},
-            {location: { lat: 53.8666335971181, lng: 10.685774984709477}},
-            {location: { lat: 53.868524126948884, lng: 10.685739812661957}},
-            {location: { lat: 53.866277147735865, lng: 10.688176136906055}},
-            {location: { lat: 53.869491027582995, lng: 10.6905499912704}},
-            {location: { lat: 53.86596260411641, lng: 10.691585472034228}},
-            {location: { lat: 53.86595211672861, lng: 10.691594364528683}},
-            {location: {lat: 53.88372911045473, lng: 10.720531989914921}},
-            {location: {lat: 53.869183939419585, lng: 10.743078535583543}}
+            {location: {lat: 53.8663742123479, lng: 10.679616632958648}}, //holstentor
+            {location: {lat: 53.86586176453497, lng: 10.682245197515524}}, //puppenmuseum
+            {location: { lat: 53.8666335971181, lng: 10.685774984709477}}, //marzipan
+            {location: { lat: 53.868524126948884, lng: 10.685739812661957}}, //thomas mann haus
+            {location: { lat: 53.866277147735865, lng: 10.688176136906055}}, //kaffeeklatsch
+            {location: { lat: 53.869491027582995, lng: 10.6905499912704}}, //guenter grass haus
+            //{location: { lat: 53.86596260411641, lng: 10.691585472034228}},
+            {location: { lat: 53.86595211672861, lng: 10.691594364528683}}, //restaurant schlumachers
+            {location: {lat: 53.88372911045473, lng: 10.720531989914921}}, //lauerholz
+            {location: {lat: 53.869183939419585, lng: 10.743078535583543}} //wang-su
                       ],
         // Note that Javascript allows us to access the constant
         // using square brackets and a string value as its
