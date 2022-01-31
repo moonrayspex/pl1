@@ -30,6 +30,14 @@
   </head>
   <body>
     <div id="map"></div>
-
+    <!--sourced: https://developers.google.com/maps/documentation/javascript/directions-->
+    <div>
+    <strong>Mode of Travel: </strong>
+    <select id="mode" onchange="calcRoute();">
+      <option value="WALKING">Walking</option>
+      <option value="BICYCLING">Bicycling</option>
+      <option value="TRANSIT">Transit</option>
+    </select>
+    </div>
   </body>
 </html>
