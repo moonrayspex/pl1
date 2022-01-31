@@ -5,11 +5,7 @@
   <head>
     <title>Rachel's Story Map</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <!--<script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>-->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initMap"
-      defer>
-    </script>
+    
     <script src="storymap.js"></script>
     <style>
         /* Always set the map height explicitly to define the size of the div
@@ -42,17 +38,19 @@
     </style>
 
   </head>
-  <body> 
-    <div id="map"></div>
-    <!--sourced: https://developers.google.com/maps/documentation/javascript/directions-->
-    <!--need to add div id and add css below-->
-      <div id="floating=panel">
-        <strong>Mode of Travel: </strong>
-        <select id="mode">
-          <option value="WALKING">Walking</option>
-          <option value="BICYCLING">Bicycling</option>
-          <option value="TRANSIT">Transit</option>
-        </select>
+  <body> <!--adapted from: https://developers.google.com/maps/documentation/javascript/examples/directions-travel-modes#maps_directions_travel_modes-html-->
+    <div id="floating-panel">
+      <b>Mode of Travel: </b>
+      <select id="mode">
+        <option value="WALKING">Walking</option>
+        <option value="BICYCLING">Bicycling</option>
+        <option value="TRANSIT">Transit</option>
+      </select>
     </div>
+    <div id="map"></div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initMap"
+      defer>
+    </script>
   </body>
 </html>
