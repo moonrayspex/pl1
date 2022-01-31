@@ -16,10 +16,10 @@ function initMap() {
     });
   });
   // Add a marker clusterer to manage the markers.
-  new MarkerClusterer(map, markers, {
-    imagePath:
-      "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-  });
+  //new MarkerClusterer(map, markers, {
+  //  imagePath:
+   //   "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
+  //});
 }
 const locations = [
 { lat: 53.8668157, lng: 10.6695952},
