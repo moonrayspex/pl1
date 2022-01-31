@@ -20,12 +20,12 @@ function initMap() {
     directionsService
       .route({
         origin: { lat: 53.86729370705401, lng: 10.6704796398457 },
-        destination: {placeID: "ChIJ6-APoCUKskcRVFq0LEhBUIE"},
+        destination: {lat: 53.87289987782688, lng: 10.746035787660583},
         //destination: { lat: 53.873207404769104, lng: 10.746151065673029},
         //Start at Hauptbahnhof - train station, end at Hotel Arnimsruh
         waypoints: [
-            {location: {placeID: "ChIJrS2izlYJskcRCN7u5pIYUOo"}},
-            {location: {placeID: "ChIJQZcWNFcJskcRDuo5SSNFoLw"}},
+            {location: {lat: 53.8663742123479, lng: 10.679616632958648}},
+            {location: {lat: 53.86586176453497, lng: 10.682245197515524}},
             {location: { lat: 53.8666335971181, lng: 10.685774984709477}},
             {location: { lat: 53.868524126948884, lng: 10.685739812661957}},
             {location: { lat: 53.866277147735865, lng: 10.688176136906055}},
@@ -33,7 +33,8 @@ function initMap() {
             {location: { lat: 53.86596260411641, lng: 10.691585472034228}},
             {location: { lat: 53.86595211672861, lng: 10.691594364528683}},
             {location: {lat: 53.89624449801269, lng: 10.71131512688614}},
-            {location: {lat: 53.87029370662248, lng: 10.74457243072382}},
+            {location: {lat: 53.87029370662248, lng: 10.74457243072382}}, 
+            {location: {placeID: "ChIJK1wi6cULskcR5FGEXn38hk8"}},
             {location: {placeID: "ChIJjTKZ5CgKskcR0q84nH_r76Q"}}
                       ],
         // Note that Javascript allows us to access the constant
