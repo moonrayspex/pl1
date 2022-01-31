@@ -2,11 +2,11 @@
 function initMap() 
     var directionsService = new google.maps.DirectionsService();
     var directionsRenderer = new google.maps.DirectionsRenderer();
-    var HBH = new google.maps.LatLng(53.86729370705401, 10.6704796398457);
+    var Hbh = new google.maps.LatLng(53.86729370705401, 10.6704796398457);
     var Arnimsruh = new google.maps.LatLng(53.873207404769104, 10.746151065673029);
     var mapOptions = {
       zoom: 12,
-      center: HBH
+      center: HbH
     }
     var map = new google.maps.Map(document.getElementById('map'), mapOptions);
     directionsRenderer.setMap(map);
@@ -30,13 +30,13 @@ function calcRoute() {
         {location: { lat: 53.86595211672861, lng: 10.691594364528683}},
         {location: {lat: 53.89624449801269, lng: 10.71131512688614}},
         {location: {lat: 53.87029370662248, lng: 10.74457243072382}},
-        {location: {lat: 53.873017004571835, lng: 10.745883695830639}},
+        {location: {lat: 53.873017004571835, lng: 10.745883695830639}}
                   ],
       // Note that JavaScript allows us to access the constant
       // using square brackets and a string value as its
       // "property."
       travelMode: google.maps.TravelMode[selectedMode]
-  };
+      };
   directionsService.route(request, function(response, status) {
     if (status == 'OK') {
       directionsRenderer.setDirections(response);
