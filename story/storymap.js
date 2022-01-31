@@ -1,37 +1,47 @@
-function initMap() {
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 15,
-    center: { lat: 53.8657257, lng: 10.6800565 },
-  });
-  // Create an array of alphabetical characters used to label the markers.
-  const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  // Add some markers to the map.
-  // Note: The code uses the JavaScript Array.prototype.map() method to
-  // create an array of markers based on a given "locations" array.
-  // The map() method here has nothing to do with the Google Maps API.
-  const markers = locations.map((location, i) => {
-    return new google.maps.Marker({
-      position: location,
-      label: labels[i % labels.length],
-    });
-  });
-  // Add a marker clusterer to manage the markers.
-  //new MarkerClusterer(map, markers, {
-  //  imagePath:
-   //   "https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m",
-  //});
-}
-const locations = [
-{ lat: 53.8668157, lng: 10.6695952},
-{ lat: 53.8657257, lng: 10.6800565 },
-{ lat: 53.8660791, lng: 10.685386},
-{ lat: 53.8678251, lng: 10.687360},
-{ lat: 53.8661445, lng: 10.6886603},
-{ lat: 53.8678251, lng: 10.6873601},
-{ lat: 53.8658546, lng: 10.6893856},
-{ lat: 53.8908232, lng: 10.7137541},
-{ lat: 53.8741275, lng: 10.7440585},
+  //making variables for intitializing DirectionsService and DirecitonsRenderer: https://developers.google.com/maps/documentation/javascript/directions
+function initMap() 
+    var directionsService = new google.maps.DirectionsService();
+    var directionsRenderer = new google.maps.DirectionsRenderer();
+    var HBH = new google.maps.LatLng(53.86729370705401, 10.6704796398457);
+    var Arnimsruh = new google.maps.LatLng(53.873207404769104, 10.746151065673029);
+    var mapOptions = {
+      zoom: 12,
+      center: HBH
+    }
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    directionsRenderer.setMap(map);
+  }
+
   
-{ lat: 53.868064, lng: 10.7490757},
-{ lat: 53.8741275, lng: 10.7440585}
-];
+//Calculate Route
+function calcRoute() {
+  var selectedMode = document.getElementById('mode').value;
+  var request = {
+      origin: HBH,
+      destination: Arnimsruh,
+      waypoints: [
+        {location: {placeID: "ChIJrS2izlYJskcRCN7u5pIYUOo"}},
+        {location: {placeID: "ChIJQZcWNFcJskcRDuo5SSNFoLw"}},
+        {location: { lat: 53.8666335971181, lng: 10.685774984709477}},
+        {location: { lat: 53.868524126948884, lng: 10.685739812661957}},
+        {location: { lat: 53.866277147735865, lng: 10.688176136906055}},
+        {location: { lat: 53.869491027582995, lng: 10.6905499912704}},
+        {location: { lat: 53.86596260411641, lng: 10.691585472034228}},
+        {location: { lat: 53.86595211672861, lng: 10.691594364528683}},
+        {location: {lat: 53.89624449801269, lng: 10.71131512688614}},
+        {location: {lat: 53.87029370662248, lng: 10.74457243072382}},
+        {location: {lat: 53.873017004571835, lng: 10.745883695830639}},
+                  ],
+      // Note that JavaScript allows us to access the constant
+      // using square brackets and a string value as its
+      // "property."
+      travelMode: google.maps.TravelMode[selectedMode]
+  };
+  directionsService.route(request, function(response, status) {
+    if (status == 'OK') {
+      directionsRenderer.setDirections(response);
+    }
+  });
+}
+
+
