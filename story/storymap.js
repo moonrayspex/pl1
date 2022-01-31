@@ -4,8 +4,11 @@ function initMap() {
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 15,
       center: { lat: 53.86774473151245, lng: 10.68957380066593 },
+      mapTypeId: "satellite",
     });
-  
+    //map tilt from: https://developers.google.com/maps/documentation/javascript/examples/aerial-simple#maps_aerial_simple-javascript
+    map.setTilt(45);
+}
     directionsRenderer.setMap(map);
     calculateAndDisplayRoute(directionsService, directionsRenderer);
     document.getElementById("mode").addEventListener("change", () => {
