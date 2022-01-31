@@ -7,8 +7,8 @@ function initMap() {
       mapTypeId: "satellite",
     });
     //map tilt from: https://developers.google.com/maps/documentation/javascript/examples/aerial-simple#maps_aerial_simple-javascript
-    map.setTilt(45);
-}
+//    map.setTilt(45);
+//}
     directionsRenderer.setMap(map);
     calculateAndDisplayRoute(directionsService, directionsRenderer);
     document.getElementById("mode").addEventListener("change", () => {
