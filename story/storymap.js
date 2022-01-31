@@ -32,7 +32,7 @@ function initMap() {
             {location: { lat: 53.869491027582995, lng: 10.6905499912704}},
             {location: { lat: 53.86596260411641, lng: 10.691585472034228}},
             {location: { lat: 53.86595211672861, lng: 10.691594364528683}},
-            {location: {lat: 53.89624449801269, lng: 10.71131512688614}},
+            {location: {lat: 53.88372911045473, lng: 10.720531989914921}},
             {location: {lat: 53.87029370662248, lng: 10.74457243072382}}, 
             //{location: {placeID: "ChIJK1wi6cULskcR5FGEXn38hk8"}},
             {location: {lat: 53.86941928198149, lng: 10.744898619928165}}
