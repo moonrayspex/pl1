@@ -1,5 +1,6 @@
 //I had tried to add custom InfoWindows and succeeded, but then ended up with duplicate markers and I did not have enough time to solve that issue.
 //I ran out of time to do a directionsrender with custom InfoWindows for each location without having duplicate markers. 
+//I had wanted to have custom InfoWindows with the location's name and link to website for the user.  
 function initMap() {
     const directionsRenderer = new google.maps.DirectionsRenderer();
     const directionsService = new google.maps.DirectionsService();
@@ -36,8 +37,6 @@ function initMap() {
             {location: { lat: 53.866608685571464, lng: 10.685810001292772}}, //marzipan
             {location: { lat: 53.86744817515813, lng: 10.761481448704354}}, //wesloer wald see 
             {location: { lat: 53.86595211672861, lng: 10.691594364528683}}, //restaurant schlumachers
-            //{location: {lat: 53.88372911045473, lng: 10.720531989914921}}, //lauerholz
-            //{location: {lat: 53.869183939419585, lng: 10.743078535583543}} //wang-su
                       ],
         // Note that Javascript allows us to access the constant
         // using square brackets and a string value as its
