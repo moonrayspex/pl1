@@ -59,7 +59,7 @@ const HBHcontentString =
   "</div>" +
   '<h1 id="firstHeading" class="firstHeading">Lübeck Hauptbahnhof, train station</h1>' +
   '<div id="bodyContent">' +
-  "<p><a href="https:www.bahnhof.de/bahnhof-de/bahnhof/L-C3-BCbeck-Hbf-1038668">Lübeck Hbf</a></p>" +
+  //"<p><a href="https:www.bahnhof.de/bahnhof-de/bahnhof/L-C3-BCbeck-Hbf-1038668">Lübeck Hbf</a></p>" +
   "</div>" +
   "</div>";
 const HBHinfowindow = new google.maps.InfoWindow({
