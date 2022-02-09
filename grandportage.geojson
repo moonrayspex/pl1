@@ -1,4 +1,4 @@
-
+$ geojson-precision -p 2 < grandportage.geojson
 {
   "type": "FeatureCollection",
   "features": [
